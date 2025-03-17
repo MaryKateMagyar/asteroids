@@ -9,8 +9,8 @@ import random
 import pygame
 
 # Local Module Imports - Game-specific modules
-import constants as c # Game constants and configurations
-import circleshape as cs # Circle-related class
+import constants as c # Game constants and configurations, like colors, sizes, and player settings
+import circleshape as cs # Base class for circular shapes, which the Asteroid class extends
 
 
 class Asteroid(cs.CircleShape):
@@ -37,7 +37,7 @@ class Asteroid(cs.CircleShape):
             radius (float): Radius of the asteroid
         """
 
-        # Use the __init__ variables from CircleShape class
+        # Initialize the player as a type of CircleShape at position (x, y) with a radius from constants
         super().__init__(x, y, radius) 
 
     def draw(self, screen):

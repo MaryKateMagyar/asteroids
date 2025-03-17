@@ -8,7 +8,7 @@ import sys # Used for systen-level operations like exiting the game
 import pygame
 
 # Local Module Imports - Game-specific modules
-import constants as c # Game constants and configurations
+import constants as c # Game constants and configurations, like colors, sizes, and player settings
 import game_systems as gs # Game running functionality
 
 

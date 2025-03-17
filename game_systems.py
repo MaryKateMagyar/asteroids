@@ -9,7 +9,7 @@ import sys # Used for systen-level operations like exiting the game
 import pygame
 
 # Local Module Imports - Game-specific modules
-import constants as c # Game constants and configurations
+import constants as c # Game constants and configurations, like colors, sizes, and player settings
 import player_module as p # Player-related classes and functionality
 import asteroid_module as a # Asteroid-related classes and functionality
 
