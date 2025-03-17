@@ -1,3 +1,6 @@
+# constants.py
+# This module handles magic number variables which are used across the Asteroids game
+
 # --- Screen Settings ---
 SCREEN_WIDTH = 1280 # Width of the game window, in pixels
 SCREEN_HEIGHT = 720 # Height of the game window, in pixels

@@ -1,24 +1,26 @@
 # main.py: Entry point for the Asteroids game
 # This file initalizes the game, handles the game loop, and ensures proper resource cleanup
 
-# Standard Library Imports - Used for systen-level operations
-import sys
+# Standard Library Imports 
+import sys # Used for systen-level operations like exiting the game
 
 # Third-Party Imports - External game libraries
 import pygame
 
 # Local Module Imports - Game-specific modules
-import constants as c
-import game_systems as gs
+import constants as c # Game constants and configurations
+import game_systems as gs # Game running functionality
 
 
 def main():
-    # Main function - Initializes and runs the Asteroids game
+    """
+    Initializes and runs the Asteroids game.
+    """
 
     print("Starting Asteroids!")
 
     # --- GAME SETUP ---
-    # Initialize the game screen, clock, and sprite groups for game assets
+    # Initialize the game screen, clock, and sprite groups for game objects
     # 'gs.setup()' is responsible for setting up everything Pygame needs
     screen, clock, updatable_group, drawable_group, asteroids_group, shots_group = gs.setup()
 
