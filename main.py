@@ -1,10 +1,8 @@
 import sys
 import pygame
 import constants as c
-import player as p
-import asteroid as a
-import asteroidfield as af
-import shot as s
+import player_module as p
+import asteroid_module as a
 
 def main():
     pygame.init()
@@ -25,10 +23,10 @@ def main():
 
     a.Asteroid.containers = (asteroids_group, updatable_group, drawable_group)
 
-    af.AsteroidField.containers = (updatable_group)
-    asteroid_field = af.AsteroidField()
+    a.AsteroidField.containers = (updatable_group)
+    asteroid_field = a.AsteroidField()
 
-    s.Shot.containers = (shots_group, updatable_group, drawable_group)
+    p.Shot.containers = (shots_group, updatable_group, drawable_group)
 
     while True:
         for event in pygame.event.get():
