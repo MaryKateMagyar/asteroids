@@ -10,8 +10,6 @@ def main():
     pygame.init()
 
     print("Starting Asteroids!")
-    print(f"Screen width: {c.SCREEN_WIDTH}")
-    print(f"Screen height: {c.SCREEN_HEIGHT}")
 
     screen = pygame.display.set_mode((c.SCREEN_WIDTH, c.SCREEN_HEIGHT))
     clock = pygame.time.Clock()
@@ -40,7 +38,13 @@ def main():
         for sprite in drawable_group:
             sprite.draw(screen)
         updatable_group.update(dt)
+        if pygame.key.get_pressed()[pygame.K_SPACE]:
+            player_character.shoot(shots_group)
         for asteroid in asteroids_group:
+            for shot in shots_group:
+                if shot.check_collisions(asteroid) == True:
+                    shot.kill()
+                    asteroid.split()
             if asteroid.check_collisions(player_character) == True:
                 print("Game over!")
                 sys.exit()
