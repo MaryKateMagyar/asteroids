@@ -1,4 +1,4 @@
-# constants.py
+# constants.py:
 # This module handles magic number variables which are used across the Asteroids game
 
 # --- Screen Settings ---
